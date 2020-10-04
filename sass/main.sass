@@ -1,0 +1,355 @@
+$brownColor: #B69B67
+$grayColor: #B4B4B4 
+$darkColor: #2C2C2C
+
+html,
+body
+    margin: 0
+    padding: 0
+    background: $darkColor
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong
+    font-family: 'Playfair Display SC', serif
+    margin: 0
+
+p,
+li,
+span,
+label,
+input,
+textarea,
+div
+    font-family: 'Ubuntu',sans-serif
+
+a
+    text-decoration: none
+
+ul,
+li
+    list-style: none
+    margin: 0
+    padding: 0
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+    @media screen and(max-width: 1224px)
+        width: 90%
+    @media screen and(max-width: 425px)
+        width: 95%
+
+// Header styles
+
+.header
+    height: 100vh
+    text-align: center
+    background: center 40%/50% url(../img/lamp.jpg) no-repeat
+    @media screen and(max-width: 1200px)
+        background: center 40%/90% url(../img/lamp.jpg) no-repeat
+    @media screen and ( max-width: 700px )
+        background: center 70%/144% url(../img/lamp.jpg) no-repeat
+    .container
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+
+    &__title
+        display: inline-block
+        color: $brownColor
+        text-transform: uppercase
+        font-weight: 400
+        position: relative
+        margin-top: 30px
+        &::before
+            content: 'Design team'
+            display: block
+            position: absolute
+            bottom: -20px
+            right: -20px
+            font-size: 15px
+            color: $grayColor
+    &__tagline
+        padding-top: 290px
+        font-size: 50px
+        font-family: 'Ubuntu',sans-serif
+        font-weight: 200
+        background: rgb(99,99,99)
+        background: radial-gradient(circle, rgba(44,44,44,1) 0%, rgba(182,173,103,1) 0%, rgba(44,44,44,1) 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        @media screen and(max-width: 1200px)
+            font-size: 30px
+        @media screen and(max-width: 780px)
+            font-size: 20px
+        @media screen and(max-width: 500px)
+            font-size: 15px
+    &__scroll
+        font-family: 'Ubuntu',sans-serif
+        font-size: 12px
+        color: #454545
+        text-transform: uppercase
+        margin-bottom: 60px
+        @media screen and(max-width: 500px)
+            font-size: 8px
+        i
+            display: block
+            font-size: 40px
+            font-weight: 200
+            @media screen and(max-width: 500px)
+                font-size: 20px
+
+// Вспомогательные стили
+.top-bars,.active
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        height: 1px
+        top: 0
+        background: $brownColor
+.default-title
+    text-transform: uppercase
+    text-align: center
+    color: $grayColor
+    font-size: 35px
+    @media screen and(max-width: 760px)
+        font-size: 20px
+.tab-out
+    display: none
+
+.active
+    color: $brownColor
+    font-size: 30px !important
+    @media screen and(max-width: 760px)
+        font-size: 20px !important
+.show
+    display: block !important
+
+.signature
+    &::after
+        content: 'Web design'
+        position: absolute
+        bottom: 20px
+        right: 10px
+        font-size: 10px
+        font-style: italic
+    &:nth-child(2)::after
+        content: 'Branding'
+    &:nth-child(3)::after
+        content: 'Photography'
+    &:nth-child(4)::after
+        content: 'Logo Design'
+
+// ----------------
+
+// Services стили 
+.services
+    &__wrapper
+        display: flex
+        color: $grayColor
+        margin: 30px 0
+        &__links
+            margin-right: 60px
+            div
+                position: relative
+                margin-bottom: 30px
+                white-space: nowrap
+                font-family: 'Ubuntu',sans-serif
+                text-transform: uppercase
+                cursor: pointer
+                font-size: 20px
+                @media screen and(max-width: 760px)
+                    font-size: 10px
+        &__slides
+
+            p
+                font-size: 13px
+                max-width: 400px
+                padding-top: 30px
+            img
+                width: 70%
+
+// Portfolio styles
+.portfolio
+    text-align: center
+    select
+        background: none
+        color: $grayColor
+        padding: 5px 12px
+        text-align: center
+        margin: 30px 0
+        option i
+            padding-right: 20px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        &__el
+            display: flex
+            height: 250px
+            width: calc(100%/2.03)
+            margin-bottom: 30px
+            position: relative
+            @media screen and(max-width: 1080px)
+                width: calc(100%/2.2)
+                height: 200px
+            @media screen and(max-width: 620px)
+                width: 100%
+            img
+                width: 60%
+                height: auto
+                flex-grow: 1
+                flex-basis: 0
+            &_text
+                text-align: left
+                background: $brownColor
+                color: $darkColor
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                position: relative
+                padding-left: 5px
+
+                h3
+                    position: relative
+                    font-family: 'Ubuntu',sans-serif
+                    font-size: 21px
+                    font-weight: 400
+                    text-transform: uppercase
+                    white-space: nowrap
+                    padding-right: 5px
+                    min-width: 125px
+                    @media screen and(max-width: 1080px)
+                        font-size: 15px
+                    &::after
+                        content: ''
+                        display: block
+                        height: 1px
+                        background: $darkColor
+                        bottom: 0
+                p
+                    font-size: 13px
+                    @media screen and(max-width: 1080px)
+                        font-size: 9px
+
+// About styles
+.about
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        @media screen and ( max-width: 600px )
+            flex-wrap: wrap
+
+        .feedback
+            color: $grayColor
+            &__el
+
+                margin-top: 40px
+                div
+                    display: flex
+                    margin-bottom: 10px
+                    p
+                        margin-left: 10px
+                        font-size: 17px
+                        @media screen and ( max-width: 926px )
+                            font-size: 12px
+
+                i
+                    display: block
+                    text-align-last: right
+                    border-top: 1px solid $brownColor
+                    text-transform: uppercase
+                    color: $brownColor
+                    padding-top: 7px
+                    font-style: normal
+        .contacts
+            &__form
+                margin-top: 40px
+                text-align: center
+                input:not(.btn)
+                    width: 70%
+                    padding: 18px 10px
+                    background: none
+                    border: 1px solid $grayColor
+                    color: $brownColor
+                    margin-bottom: 15px
+                textarea
+                    background: none
+                    border: 1px solid $grayColor
+                    color: $brownColor
+                    margin-bottom: 15px
+                    width: 70%
+                    min-width: 70%
+                    max-width: 200px
+                    min-height: 150px
+                    max-height: 200px
+                    padding: 18px 10px
+                .btn
+                    width: 200px
+                    background: $brownColor
+                    border: none
+                    color: $darkColor
+                    text-transform: uppercase
+                    padding: 10px 0px
+                    font-size: 18px
+                    font-weight: 400
+// Contacts 
+.contacts
+    text-align: center
+    &__wrapper
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+        text-transform: uppercase
+        font-size: 20px
+        margin-top: 60px 
+        margin-bottom: 10px
+        @media screen and ( max-width: 760px )
+            font-size: 17px
+        @media screen and ( max-width: 420px )
+            font-size: 14px
+        &__el
+            text-align: center
+            margin-bottom: 20px
+            h4
+                color: $brownColor
+                font-family: 'Ubuntu',sans-serif
+                border-top: 1px solid $brownColor
+                padding-top: 5px
+                display: inline-block
+            p
+                color: $grayColor
+    img
+        width: 50%
+        height: auto
+// Footer 
+.footer
+    &__wrapper
+        text-align: center
+        h1
+            padding: 0
+    &__nav
+        display: flex
+        justify-content: space-around
+        text-transform: uppercase
+        flex-wrap: wrap
+        margin: 30px 0
+        li
+            margin-left: 7px
+
+            a
+                color: $grayColor
+                font-size: 12px
+                @media screen and ( max-width: 425px )
+                    font-size: 9px
+    img
+        width: 70%
