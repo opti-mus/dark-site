@@ -53,7 +53,7 @@ li
     @media screen and(max-width: 1200px)
         background: center 40%/90% url(../img/lamp.jpg) no-repeat
     @media screen and ( max-width: 700px )
-        background: center 70%/144% url(../img/lamp.jpg) no-repeat
+        background: center 57%/144% url(../img/lamp.jpg) no-repeat
     .container
         height: 100%
         display: flex
@@ -314,8 +314,8 @@ li
         font-size: 20px
         margin-top: 25px 
         margin-bottom: 10px
-        @media screen and ( max-width: 760px )
-            font-size: 17px
+        @media screen and ( max-width: 768px )
+            font-size: 16px
         @media screen and ( max-width: 420px )
             font-size: 14px
         &__el
@@ -329,6 +329,9 @@ li
                 display: inline-block
             p
                 color: $grayColor
+                @media screen and ( max-width: 760px )
+                    margin-left: 15px
+                    margin-right: 15px
     img
         width: 50%
         height: auto
