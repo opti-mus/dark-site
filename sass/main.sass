@@ -259,8 +259,11 @@ li
         display: flex
         color: $grayColor
         margin: 30px 0
+        justify-content: center
         &__links
             margin-right: 60px
+            @media screen and (max-width: 425px)
+                margin-right: 20px
             div
                 position: relative
                 margin-bottom: 30px
@@ -272,12 +275,14 @@ li
                 @media screen and(max-width: 760px)
                     font-size: 10px
         &__slides
-
+            width: 37%
+            @media screen and(max-width: 425px)
+                width: 100%
             p
                 font-size: 13px
                 max-width: 400px
             img
-                width: 70%
+                width: 100%
 
 // Portfolio styles
 .portfolio

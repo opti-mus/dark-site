@@ -402,10 +402,19 @@ li {
   display: flex;
   color: #B4B4B4;
   margin: 30px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .services__wrapper__links {
   margin-right: 60px;
+}
+
+@media screen and (max-width: 425px) {
+  .services__wrapper__links {
+    margin-right: 20px;
+  }
 }
 
 .services__wrapper__links div {
@@ -424,13 +433,23 @@ li {
   }
 }
 
+.services__wrapper__slides {
+  width: 37%;
+}
+
+@media screen and (max-width: 425px) {
+  .services__wrapper__slides {
+    width: 100%;
+  }
+}
+
 .services__wrapper__slides p {
   font-size: 13px;
   max-width: 400px;
 }
 
 .services__wrapper__slides img {
-  width: 70%;
+  width: 100%;
 }
 
 .portfolio {
