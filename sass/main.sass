@@ -50,11 +50,11 @@ li
     height: 100vh
     min-height: 600px
     text-align: center
-    background: center 40%/50% url(../img/lamp.jpg) no-repeat
+    background: center 40%/50% url(/img/lamp.jpg) no-repeat
     @media screen and(max-width: 1200px)
-        background: center 40%/90% url(../img/lamp.jpg) no-repeat
+        background: center 40%/90% url(/img/lamp.jpg) no-repeat
     @media screen and ( max-width: 700px )
-        background: center 57%/144% url(../img/lamp.jpg) no-repeat
+        background: center 57%/144% url(/img/lamp.jpg) no-repeat
     .container
         height: 100%
         display: flex
@@ -63,6 +63,7 @@ li
         align-items: center
         position: relative
     &-bars
+        cursor: pointer
         box-sizing: border-box
         padding: 6px 0
         width: 50px
@@ -136,7 +137,7 @@ li
                             color: $brownColor
         &__search
             width: 50%
-            background: center 40%/60% url(../img/menu-bg.jpg) no-repeat
+            background: center 40%/60% url(/img/menu-bg.jpg) no-repeat
             input
                 background: none
                 border: none
@@ -283,6 +284,7 @@ li
                 max-width: 400px
             img
                 width: 100%
+                mix-blend-mode: lighten
 
 // Portfolio styles
 .portfolio
@@ -490,7 +492,7 @@ li
     top: 50%
     transform: translate(-50%,-50%)
     display: none
-    padding: 10px 30px
+    padding: 30px 30px
     background-color: $darkColor
     border: 1px solid $grayColor
     @media screen and ( max-width: 425px )
@@ -512,12 +514,20 @@ li
                 padding: 5px 10px
                 text-transform: lowercase
                 color: #3b5998
+                
                 &:nth-child(2)
                     color: #dd4b39
-                    border: 1px solid #dd4b39
+                    border-color: #dd4b39
+                    &:hover
+                        background-color: #dd4b39
                 &:nth-child(3)
                     color: #1da1f2
-                    border: 1px solid #1da1f2
+                    border-color: #1da1f2
+                    &:hover
+                        background-color: #1da1f2
+                &:hover
+                    background-color: #3b5998
+                    color: #2C2C2C
 
         p
             text-transform: uppercase
@@ -529,7 +539,7 @@ li
             background: none
             border: 1px solid $grayColor
             padding: 8px 5px
-            margin-bottom: 10px
+            margin-bottom: 17px
             color: $brownColor
         input[type='submit']
             width: 100px
@@ -537,6 +547,7 @@ li
             background: $brownColor
             border: none
             color: $darkColor
+            cursor: pointer
     &.sign-up
         div
             display: flex

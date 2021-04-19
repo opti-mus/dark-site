@@ -58,18 +58,18 @@ li {
   height: 100vh;
   min-height: 600px;
   text-align: center;
-  background: center 40%/50% url(../img/lamp.jpg) no-repeat;
+  background: center 40%/50% url(/img/lamp.jpg) no-repeat;
 }
 
 @media screen and (max-width: 1200px) {
   .header {
-    background: center 40%/90% url(../img/lamp.jpg) no-repeat;
+    background: center 40%/90% url(/img/lamp.jpg) no-repeat;
   }
 }
 
 @media screen and (max-width: 700px) {
   .header {
-    background: center 57%/144% url(../img/lamp.jpg) no-repeat;
+    background: center 57%/144% url(/img/lamp.jpg) no-repeat;
   }
 }
 
@@ -92,6 +92,7 @@ li {
 }
 
 .header-bars {
+  cursor: pointer;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 6px 0;
@@ -223,7 +224,7 @@ li {
 
 .header-menu__search {
   width: 50%;
-  background: center 40%/60% url(../img/menu-bg.jpg) no-repeat;
+  background: center 40%/60% url(/img/menu-bg.jpg) no-repeat;
 }
 
 .header-menu__search input {
@@ -450,6 +451,7 @@ li {
 
 .services__wrapper__slides img {
   width: 100%;
+  mix-blend-mode: lighten;
 }
 
 .portfolio {
@@ -788,7 +790,7 @@ li {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: none;
-  padding: 10px 30px;
+  padding: 30px 30px;
   background-color: #2C2C2C;
   border: 1px solid #B4B4B4;
 }
@@ -833,12 +835,25 @@ li {
 
 .sign-form form .sign-form-links a:nth-child(2) {
   color: #dd4b39;
-  border: 1px solid #dd4b39;
+  border-color: #dd4b39;
+}
+
+.sign-form form .sign-form-links a:nth-child(2):hover {
+  background-color: #dd4b39;
 }
 
 .sign-form form .sign-form-links a:nth-child(3) {
   color: #1da1f2;
-  border: 1px solid #1da1f2;
+  border-color: #1da1f2;
+}
+
+.sign-form form .sign-form-links a:nth-child(3):hover {
+  background-color: #1da1f2;
+}
+
+.sign-form form .sign-form-links a:hover {
+  background-color: #3b5998;
+  color: #2C2C2C;
 }
 
 .sign-form form p {
@@ -857,7 +872,7 @@ li {
   background: none;
   border: 1px solid #B4B4B4;
   padding: 8px 5px;
-  margin-bottom: 10px;
+  margin-bottom: 17px;
   color: #B69B67;
 }
 
@@ -867,6 +882,7 @@ li {
   background: #B69B67;
   border: none;
   color: #2C2C2C;
+  cursor: pointer;
 }
 
 .sign-form.sign-up div {

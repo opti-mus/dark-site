@@ -6,9 +6,9 @@ Tabs(tabsOut, tabs);
 document.addEventListener('click', (e) => {
     const menu = document.querySelector('.header-menu')
     const bars = document.querySelector('.header-bars');
-    const signIn = document.querySelector('.sign-in');
-    const signUp = document.querySelector('.sign-up');
     const signWrapper = document.querySelector('.sign-wrapper');
+  
+
 
     if (e.target.dataset.menu) {
 
